@@ -16,7 +16,7 @@ def login_sucess():
   screen3 = Toplevel(screen)
   screen3.title("Success")
   screen3.geometry("200x200")
-  screen3.iconbitmap('G:\Python programimg\Python_dev\icon\permission.ico')
+  screen3.iconbitmap('G:\Python_dev\icon\permission.ico')
   Label(screen3, text = "Login Sucess, Hello "+username1+" !", foreground='green').pack(ipadx=10,ipady=50)
 
   Button(screen3, text = "OK", command =delete2).pack()
@@ -44,7 +44,7 @@ def register_user():
   username_info = username.get()
   password_info = password.get()
 
-  file=open('G:/Python programimg/Python_dev/database/'+username_info, "w")
+  file=open('G:/Python_dev/database/'+username_info, "w")
   file.write(username_info+"\n")
   file.write(password_info)
   file.close()
@@ -62,9 +62,9 @@ def login_verify():
   username_entry1.delete(0, END)
   password_entry1.delete(0, END)
 
-  list_of_files = os.listdir('G:/Python programimg/Python_dev/database')
+  list_of_files = os.listdir('G:/Python_dev/database')
   if username1 in list_of_files:
-    file1 = open('G:/Python programimg/Python_dev/database/'+username1, "r")
+    file1 = open('G:/Python_dev/database/'+username1, "r")
     verify = file1.read().splitlines()
     if password1 in verify:
         login_sucess()
@@ -104,7 +104,7 @@ def register():
 def login():
   global screen2
   screen2 = Toplevel(screen)
-  screen2.iconbitmap('G:\Python programimg\Python_dev\icon\permission.ico')
+  screen2.iconbitmap('G:\Python_dev\icon\permission.ico')
   screen2.title("Login")
   screen2.geometry("300x250")
   Label(screen2, text = "Please enter details below to login").pack()
@@ -133,7 +133,7 @@ def login():
 def main_screen():
   global screen
   screen = Tk()
-  screen.iconbitmap('G:\Python programimg\Python_dev\icon\permission.ico')
+  screen.iconbitmap('G:\Python_dev\icon\permission.ico')
   screen.geometry("300x250")
   screen.title("System 1.0")
   Label(text = "System 1.0", bg = "grey", width = "300", height = "2", font = ("Calibri", 13)).pack()
